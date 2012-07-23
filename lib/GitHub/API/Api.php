@@ -229,7 +229,7 @@ class Api
      */
     protected function doRequest($method, $url, $params, $headers)
     {
-        $request = $this->transport->createRequest();
+        $request = $this->transport->getMessageFactory()->createRequest();
 
         $request->setMethod($method);
         $request->fromUrl($url);
